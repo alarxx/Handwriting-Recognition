@@ -1,9 +1,7 @@
 package com.rat6.activities.select;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
-import android.util.Log;
 
 import com.rat6.utils.Utils;
 import com.rat6.utils.WordRec;
@@ -30,13 +28,13 @@ import static org.bytedeco.opencv.global.opencv_imgproc.rectangle;
 
 public class SelectScreen extends Screen {
 
-    private android.graphics.Rect cam_src, cam_dst, recog_Button;
+    private android.graphics.Rect cam_src, cam_dst, nextButton;
 
     private Set<Integer> wordsRectsIDs;
     private StartNewClass newClass;
 
     Paint transGreen = new Paint();
-    private Bitmap bitmap;
+    private Bitmap bitmap, nextBitmap;
     private List<Rect> wordsRects;
 
     private WordRec wordRecog;
@@ -44,6 +42,8 @@ public class SelectScreen extends Screen {
 
     private AndroidFrameConverter converterToBitmap;
     private OpenCVFrameConverter.ToMat converterToMat;
+
+    int xStart, yStart;
 
     public SelectScreen(Game game, StartNewClass newClass, Mat matOrig, WordRec wordRecog) {
         super(game);
@@ -67,7 +67,16 @@ public class SelectScreen extends Screen {
 
         cam_src = new android.graphics.Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
         cam_dst =  new android.graphics.Rect(0, 0, game.getGraphics().getWidth(), bitmap.getHeight()*game.getGraphics().getWidth()/bitmap.getWidth());
-        recog_Button = new android.graphics.Rect(0, bitmap.getHeight(), game.getGraphics().getWidth(), game.getGraphics().getHeight());
+
+        Graphics g = game.getGraphics();
+
+        nextBitmap = g.newBitmap("buttons.png");
+
+        xStart = g.getWidth() - (g.getWidth()/4);
+        yStart = g.getHeight() - (g.getHeight()/7);
+        nextButton = new android.graphics.Rect(xStart, yStart, g.getWidth(), g.getHeight());
+
+
         transGreen.setARGB(100, 0, 255, 0);
     }
 
@@ -88,6 +97,7 @@ public class SelectScreen extends Screen {
             Rect r = wordsRects.get(i);
             g.drawRect(r.x(), r.y(), r.width(), r.height(), transGreen);
         }
+        g.drawBitmap(nextBitmap, null, nextButton, null);
     }
 
     List<String> words;
@@ -101,7 +111,8 @@ public class SelectScreen extends Screen {
             }
         }
         else if(event.type == TouchEvent.TOUCH_UP) {
-            if (Overlap.pointInRect(recog_Button, event)) {
+            if (Overlap.pointInRect(nextButton, event)) {
+
                 select_Rects();
                 words = new ArrayList<String>();
                 recognize();

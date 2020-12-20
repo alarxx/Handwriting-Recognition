@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WordRec">
 
-        <activity android:name="com.rat6.activities.ListAct"
+        <activity android:name="com.rat6.activities.ButtonStart"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait">
             <intent-filter>

@@ -34,9 +34,9 @@ public class WordRecActivityUp extends Activity implements CvCameraView.CvCamera
 
     private CvCameraView cameraView;
 
-    android.graphics.Rect take_a_picture_Button;
+    android.graphics.Rect nextButton;
 
-    Bitmap ertas;
+    Bitmap nextBitmap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,11 +55,14 @@ public class WordRecActivityUp extends Activity implements CvCameraView.CvCamera
         cameraView.setCvCameraViewListener(this);
         cameraView.setCameraSize(Constants.CAMERA_W, Constants.CAMERA_H);
     }
-
+    int xStart;
+    int yStart;
     @Override public void onCameraViewStarted(int camera_width, int camera_height){
-        int hFrame = camera_height * cameraView.getCANVAS_WIDTH() / camera_width;
-        take_a_picture_Button = new android.graphics.Rect(0, hFrame, cameraView.getCANVAS_WIDTH(), cameraView.getCANVAS_HEIGHT());
-        ertas = cameraView.getGraphics().newBitmap("ertas.png");
+        //int hFrame = camera_height * cameraView.getCANVAS_WIDTH() / camera_width;
+        nextBitmap = cameraView.getGraphics().newBitmap("buttons.png");
+        xStart = cameraView.getCANVAS_WIDTH() - (cameraView.getCANVAS_WIDTH()/4); //nextBitmap.getWidth();
+        yStart = cameraView.getCANVAS_HEIGHT() - (cameraView.getCANVAS_HEIGHT()/7); //nextBitmap.getHeight();
+        nextButton = new android.graphics.Rect(xStart, yStart, cameraView.getCANVAS_WIDTH(), cameraView.getCANVAS_HEIGHT());
     }
 
 
@@ -85,7 +88,7 @@ public class WordRecActivityUp extends Activity implements CvCameraView.CvCamera
         for(int i=0; i<touchEvents.size(); i++){
             TouchEvent event = touchEvents.get(i);
             if(event.type == TouchEvent.TOUCH_UP) {
-                if(Overlap.pointInRect(take_a_picture_Button, event)) {
+                if(Overlap.pointInRect(nextButton, event)) {
                     startActivity(new Intent(this, SelectWordsActivity.class));
                     finish();
                 }
@@ -96,7 +99,7 @@ public class WordRecActivityUp extends Activity implements CvCameraView.CvCamera
     @Override
     public void present(float deltaTime){
         Graphics g = cameraView.getGraphics();
-        g.drawBitmap(ertas, 10, 10, null);
+        g.drawBitmap(nextBitmap, null, nextButton, null);
     }
 
     @Override

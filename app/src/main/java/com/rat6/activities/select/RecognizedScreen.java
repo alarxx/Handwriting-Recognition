@@ -1,12 +1,10 @@
 package com.rat6.activities.select;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.util.Log;
 
 import com.rat6.utils.Algorithm;
-import com.rat6.utils.Constants;
 import com.rat6.utils.StorageHelper;
 import com.rat6.utils.Utils;
 import com.retro.androidgames.framework.StartNewClass;
@@ -16,11 +14,7 @@ import com.retro.androidgames.framework.Graphics;
 import com.retro.androidgames.framework.Input;
 import com.retro.androidgames.framework.Screen;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,18 +22,27 @@ import java.util.Set;
 
 public class RecognizedScreen extends Screen {
 
-    android.graphics.Rect src, dst, backButton ;
+    android.graphics.Rect src, dst, nextButton;
     StartNewClass newClass;
-    Bitmap bitmap;
+    Bitmap bitmap, nextBitmap;
     String text;
+    int xStart, yStart;
 
     public RecognizedScreen(Game game, StartNewClass newClass, Bitmap bitmap, List<String> words) {
         super(game);
         this.newClass = newClass;
         this.bitmap = bitmap;
+
+        Graphics g = game.getGraphics();
+
         src = new android.graphics.Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
-        dst =  new android.graphics.Rect(0, 0, game.getGraphics().getWidth(), bitmap.getHeight()*game.getGraphics().getWidth()/bitmap.getWidth());
-        backButton = new android.graphics.Rect(0, bitmap.getHeight(), game.getGraphics().getWidth(), game.getGraphics().getHeight());
+        dst =  new android.graphics.Rect(0, 0, g.getWidth(), bitmap.getHeight()*g.getWidth()/bitmap.getWidth());
+
+        nextBitmap = g.newBitmap("buttons.png");
+
+        xStart = g.getWidth() - (g.getWidth()/4);
+        yStart = g.getHeight() - (g.getHeight()/7);
+        nextButton = new android.graphics.Rect(xStart, yStart, g.getWidth(), g.getHeight());
 
         Log.d("RECOD_WORD_TEST", words.toString());
 
@@ -138,7 +141,7 @@ public class RecognizedScreen extends Screen {
     }
     private void checkOverlap(Input.TouchEvent event) {
         if (event.type == Input.TouchEvent.TOUCH_UP) {
-            if (Overlap.pointInRect(backButton, event)) {
+            if (Overlap.pointInRect(nextButton, event)) {
                 newClass.startNewClass();
             }
         }
@@ -148,6 +151,8 @@ public class RecognizedScreen extends Screen {
     public void present(float deltaTime) {
         Graphics g = game.getGraphics();
         g.drawBitmap(bitmap, src, dst, null);
+        g.drawBitmap(nextBitmap, null, nextButton, null);
+
     }
 
     @Override public void pause() { }
