@@ -25,13 +25,15 @@ public class RecognizedScreen extends Screen {
     android.graphics.Rect src, dst, nextButton;
     StartNewClass newClass;
     Bitmap bitmap, nextBitmap;
-    String text;
+    String mbtext;
     int xStart, yStart;
 
     public RecognizedScreen(Game game, StartNewClass newClass, Bitmap bitmap, List<String> words) {
         super(game);
         this.newClass = newClass;
         this.bitmap = bitmap;
+
+        origText = Utils.join(" ", words);
 
         Graphics g = game.getGraphics();
 
@@ -50,12 +52,14 @@ public class RecognizedScreen extends Screen {
         StorageHelper.loadMayBeLetters(sim_letters);
 
         List<String> text2 = updateTextT9(game.getFileIO().getAssets(), words, sim_letters);
-        text = Utils.join(" ", text2);
+        mbtext = Utils.join(" ", text2);
         sim_letters = null;
 
         Log.d("RECOD_WORD_TEST", text2.toString());
-        Log.d("RECOD_WORD_TEST", text);
+        Log.d("RECOD_WORD_TEST", mbtext);
     }
+
+    String origText = "";
 
     private List<String> updateTextT9(AssetManager assetManager, List<String> text, Map<String, Set<String>> sim_letters){
 
@@ -69,9 +73,9 @@ public class RecognizedScreen extends Screen {
 
                 List<String> sim_words = getMBwords(word, dict);
 
-                String correct_word = getCorrectWord(word, sim_words, sim_letters);
+                //String correct_word = getCorrectWord(word, sim_words, sim_letters);
 
-                res.add(correct_word);
+                res.addAll(sim_words);
             }
 
         return res;
@@ -102,13 +106,13 @@ public class RecognizedScreen extends Screen {
         int words_length = word.length();
         for(String s: sim_words){
                 //ПЕРЕПИСАТЬ, А ТО ГОВНО КАКОЕ-ТО ТУТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if(s.length()==words_length && isSimi(word, s, sim_letters)) {
-                correct_words.add(s);
-            }
+            if(s.length()==words_length/* && isSimi(word, s, sim_letters)*/) correct_words.add(s);
         }
+    /*
         if(correct_words.isEmpty()){
             correct_words.add(word);
-        }
+        }*/
+
         Log.d("MBWords", correct_words.toString());
         return correct_words.get(0);
     }
@@ -119,9 +123,7 @@ public class RecognizedScreen extends Screen {
         String[] str2 = simi2.split("");
         for(int i=0; i<word.length(); i++){
             if(!w[i].equals(str2[i])){
-                if(!dict_sim.get(w[i]).contains(str2[i])){
-                    res = false;
-                }
+                if(!dict_sim.get(w[i]).contains(str2[i])){ res = false; }
             }
         }
         return res;
@@ -137,7 +139,7 @@ public class RecognizedScreen extends Screen {
             Input.TouchEvent event = touchEvents.get(i);
             checkOverlap(event);
         }
-        Log.d("Words", text);
+        Log.d("Words", mbtext);
     }
     private void checkOverlap(Input.TouchEvent event) {
         if (event.type == Input.TouchEvent.TOUCH_UP) {
@@ -152,7 +154,10 @@ public class RecognizedScreen extends Screen {
         Graphics g = game.getGraphics();
         g.drawBitmap(bitmap, src, dst, null);
         g.drawBitmap(nextBitmap, null, nextButton, null);
-
+        if(mbtext != null && origText!=null) {
+            g.drawText(mbtext, 100, g.getHeight() - 300, 20);
+            g.drawText(origText, 100, g.getHeight() - 370, 50);
+        }
     }
 
     @Override public void pause() { }

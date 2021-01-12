@@ -6,6 +6,7 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options ;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.Log;
@@ -137,7 +138,14 @@ public class AndroidGraphics implements Graphics {
         canvas.drawBitmap(bitmap, src, dst, paint);
     }
 
-
+    @Override
+    public void drawText(String text, int x, int y, int fontSize){
+        Paint paint = new Paint();
+        paint.setColor(Color.BLUE);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(fontSize);
+        canvas.drawText(text, x, y, paint);
+    }
 
     @Override
     public int getWidth() {

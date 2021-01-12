@@ -21,5 +21,6 @@ public interface Graphics {
     public int getHeight();
     public void drawBitmap(Bitmap bitmap, float left, float top, Paint paint);
     public void drawBitmap(Bitmap bitmap, Rect src, Rect dst, Paint paint);
+    public void drawText(String text, int x, int y, int fontSize);
 }
 

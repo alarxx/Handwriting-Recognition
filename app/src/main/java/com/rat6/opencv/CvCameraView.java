@@ -457,6 +457,8 @@ public class CvCameraView extends SurfaceView implements SurfaceHolder.Callback,
                     }
                 }
 
+                parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+
                 cameraDevice.setParameters(parameters); // save everything
 
                 // print saved parameters
