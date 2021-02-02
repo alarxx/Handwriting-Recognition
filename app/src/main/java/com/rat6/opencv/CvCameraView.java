@@ -718,6 +718,7 @@ public class CvCameraView extends SurfaceView implements SurfaceHolder.Callback,
     }
 
     private class CameraWorker implements Runnable {
+        //Привет. Надеюсь вы понимаете что здесь написанно.
         public void run() {
             do {
                 boolean hasFrame = false;
