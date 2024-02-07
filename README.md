@@ -1,4 +1,4 @@
-# WordRecAndroid               
+# HandwritingRecAndroid               
                           Off line handwritten text recognition using DL4J and OpenCV libs
                           
 Off line подразумевает, что слово сегментируется на буквы, эти буквы проходят через нейронку и получается криво предсказанное слово.
