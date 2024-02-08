@@ -7,15 +7,18 @@ School research project focusing on the development of an application for recogn
 
 The project's main stack was Java development for Android and used DL4J, OpenCV. A standard neural network representing non-linear logistic regression was developed from scratch.
 
+The evolution of the project is to abstract away from the specific problem and develop tensors and operations on them for machine learning: [Tensor-Library](https://github.com/Alar-q/Tensor-library).
+
 ## Demonstration
 
 https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/4e19404b-a9fb-493a-9e88-180db9f6ea89
 
-
 https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/28f5d4d9-6dd7-48d2-9dc7-47cab7faec8b
 
 ## Documents
+
 [Presentation](https://github.com/Alar-q/HandwritingRecAndroid/blob/master/assets/%D0%90%D0%BB%D0%B0%D1%80%20%D0%90%D0%BA%D0%B8%D0%BB%D1%8C%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%821.pdf)
+
 [Paper](https://github.com/Alar-q/HandwritingRecAndroid/blob/master/assets/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%90%D0%BB%D0%B0%D1%80.docx)
 
 ## Results
