@@ -1,4 +1,4 @@
-# HandwritingRecAndroid               
+# Handwriting-Recognition   
 
 Разработка приложения для распознавания рукописного текста наказахском языке.
 
