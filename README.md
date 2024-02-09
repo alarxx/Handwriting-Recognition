@@ -21,6 +21,12 @@ https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/28f5d4d9-6dd7-48
 
 [Paper](https://github.com/Alar-q/HandwritingRecAndroid/blob/master/assets/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%90%D0%BB%D0%B0%D1%80.docx)
 
+## References
+- Прохоренок, Н. А. (2018). OpenCV и Java. Обработка изображений и компьютерное зрение. БХВ-Петербург.
+- Rashid, T. (2016). Make Your own neural network. CreateSpace Independent Publishing Platform.
+- Patterson, J., & Gibson, A. (2017). Deep learning: A practitioner’s approach (First edition). O’Reilly.
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
+
 ## Results
 
 Ru: Диплом первой степени республиканского конкурса научных проектов по общеобразовательным предметам.
@@ -33,13 +39,6 @@ Eng: First degree diploma of the republican competition of scientific projects i
 ## Paper 19/03/2021
 
 ![photo_2024-02-09_15-46-34](https://github.com/Alar-q/Handwriting-Recognition/assets/72505048/1ab223ee-5c84-4734-b686-5a60ee3ea5e9)
-
-
-## References
-- Прохоренок, Н. А. (2018). OpenCV и Java. Обработка изображений и компьютерное зрение. БХВ-Петербург.
-- Rashid, T. (2016). Make Your own neural network. CreateSpace Independent Publishing Platform.
-- Patterson, J., & Gibson, A. (2017). Deep learning: A practitioner’s approach (First edition). O’Reilly.
-- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
 
 
 ## Description 02/2021
