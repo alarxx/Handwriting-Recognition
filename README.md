@@ -30,7 +30,7 @@ Eng: First degree diploma of the republican competition of scientific projects i
 ![гос_проект _page-0001](https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/e45bc32b-3a26-4a47-84e1-d2f5a625f1bd)
 
 
-## Paper
+## Paper 19/03/2021
 
 ![photo_2024-02-09_15-46-34](https://github.com/Alar-q/Handwriting-Recognition/assets/72505048/1ab223ee-5c84-4734-b686-5a60ee3ea5e9)
 
@@ -42,7 +42,7 @@ Eng: First degree diploma of the republican competition of scientific projects i
 - Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
 
 
-## Description 05/2021
+## Description 02/2021
 Программа написана на Java, с использованием открытых библиотек OpenCV и DL4J, под android, не составляет труда перенести ее на другие платформы.  На разработку ушло 2 месяца. Изначально я писал на Java полносвязную искусственную нейронную сеть с нуля, и я написал, но скорость обучения и прогнозирования медленнее библиотеки DL4J. Мне были интересны нейронные сети и интересны до сих пор. Тема проекта была выбрана при обсуждении направления проекта с научным консультантом Дарией Болатовной.  Изначально было умение программировать, чему я научился, изучая литературу, и желание сделать что-нибудь из области искусственного интеллекта.  
 
 Я также добавил словарь казахского языка, откуда программа может предлагать наиболее похожие слова, так как ошибки при распознавании все же есть. Думаю, что можно улучшить метод со словарем, создав систему понимания контекста данного текста. Например, люди, читая записки врача, пытаются найти именно "медицинские" термины.
@@ -51,7 +51,7 @@ Eng: First degree diploma of the republican competition of scientific projects i
 
 
 
-## Technical Description 05/2021
+## Technical Description 02/2021
                           Off line handwritten text recognition using DL4J and OpenCV libs
                           
 Off line подразумевает, что слово сегментируется на буквы, эти буквы проходят через нейронку и получается криво предсказанное слово.
