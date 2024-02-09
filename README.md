@@ -40,7 +40,11 @@ Eng: First degree diploma of the republican competition of scientific projects i
 
 ![photo_2024-02-09_15-46-34](https://github.com/Alar-q/Handwriting-Recognition/assets/72505048/1ab223ee-5c84-4734-b686-5a60ee3ea5e9)
 
-[Телеканал 24kz. (27 Jul 2021). Рукописное сделает печатным | Hi-Tech](https://www.youtube.com/watch?v=sn8fddtPbFc&ab_channel=%D0%A2%D0%B5%D0%BB%D0%B5%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB24kz)
+[Телеканал 24kz (Youtube). (27 Jul 2021). Рукописное сделает печатным | Hi-Tech](https://www.youtube.com/watch?v=sn8fddtPbFc&ab_channel=%D0%A2%D0%B5%D0%BB%D0%B5%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB24kz)
+
+[ПАВЛОДАРСКИЕ РАЗРАБОТЧИКИ - ЛУЧШИЕ В РЕСПУБЛИКЕ](https://tou.edu.kz/ru/news/9824-pavlodarli-mamandar-respublikada-zdk)
+
+[Республикалық ғылыми жобалар конкурсының қорытындысы](https://www.jasdarynpvl.edu.kz/journal/view/1/523)
 
 ## Description 02/2021
 Программа написана на Java, с использованием открытых библиотек OpenCV и DL4J, под android, не составляет труда перенести ее на другие платформы.  На разработку ушло 2 месяца. Изначально я писал на Java полносвязную искусственную нейронную сеть с нуля, и я написал, но скорость обучения и прогнозирования медленнее библиотеки DL4J. Мне были интересны нейронные сети и интересны до сих пор. Тема проекта была выбрана при обсуждении направления проекта с научным консультантом Дарией Болатовной.  Изначально было умение программировать, чему я научился, изучая литературу, и желание сделать что-нибудь из области искусственного интеллекта.  
