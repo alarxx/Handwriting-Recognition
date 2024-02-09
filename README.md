@@ -30,6 +30,14 @@ Eng: First degree diploma of the republican competition of scientific projects i
 
 ![гос_проект _page-0001](https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/e45bc32b-3a26-4a47-84e1-d2f5a625f1bd)
 
+
+## References
+- Прохоренок, Н. А. (2018). OpenCV и Java. Обработка изображений и компьютерное зрение. БХВ-Петербург.
+- Rashid, T. (2016). Make Your own neural network. CreateSpace Independent Publishing Platform.
+- Patterson, J., & Gibson, A. (2017). Deep learning: A practitioner’s approach (First edition). O’Reilly.
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
+
+
 ## Description 05/2021
 Программа написана на Java, с использованием открытых библиотек OpenCV и DL4J, под android, не составляет труда перенести ее на другие платформы.  На разработку ушло 2 месяца. Изначально я писал на Java полносвязную искусственную нейронную сеть с нуля, и я написал, но скорость обучения и прогнозирования медленнее библиотеки DL4J. Мне были интересны нейронные сети и интересны до сих пор. Тема проекта была выбрана при обсуждении направления проекта с научным консультантом Дарией Болатовной.  Изначально было умение программировать, чему я научился, изучая литературу, и желание сделать что-нибудь из области искусственного интеллекта.  
 
@@ -37,11 +45,7 @@ Eng: First degree diploma of the republican competition of scientific projects i
 
 Проблема программы в том, что каждая буква должна быть написана раздельно, а так обычно не пишут. Я думаю, что можно объединить технологию рукописного ввода и рекуррентные нейронные сети с долгой краткосрочной памятью и, тем самым, распознавать непрерывный рукописный текст, написанный любым почерком.
 
-## References
-- Прохоренок, Н. А. (2018). OpenCV и Java. Обработка изображений и компьютерное зрение. БХВ-Петербург.
-- Rashid, T. (2016). Make Your own neural network. CreateSpace Independent Publishing Platform.
-- Patterson, J., & Gibson, A. (2017). Deep learning: A practitioner’s approach (First edition). O’Reilly.
-- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
+
 
 ## Technical Description 05/2021
                           Off line handwritten text recognition using DL4J and OpenCV libs
