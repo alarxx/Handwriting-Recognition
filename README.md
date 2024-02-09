@@ -23,12 +23,16 @@ https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/28f5d4d9-6dd7-48
 
 ## Results
 
-
 Ru: Диплом первой степени республиканского конкурса научных проектов по общеобразовательным предметам.
 
 Eng: First degree diploma of the republican competition of scientific projects in general education subjects.
 
 ![гос_проект _page-0001](https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/e45bc32b-3a26-4a47-84e1-d2f5a625f1bd)
+
+
+## Paper
+
+![photo_2024-02-09_15-46-34](https://github.com/Alar-q/Handwriting-Recognition/assets/72505048/1ab223ee-5c84-4734-b686-5a60ee3ea5e9)
 
 
 ## References
