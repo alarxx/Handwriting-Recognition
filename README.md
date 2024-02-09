@@ -31,8 +31,13 @@ https://github.com/Alar-q/HandwritingRecAndroid/assets/72505048/28f5d4d9-6dd7-48
 
 Проблема программы в том, что каждая буква должна быть написана раздельно, а так обычно не пишут. Я думаю, что можно объединить технологию рукописного ввода и рекуррентные нейронные сети с долгой краткосрочной памятью и, тем самым, распознавать непрерывный рукописный текст, написанный любым почерком.
 
+## References
+- Rashid, T. (2016). Make Your own neural network. CreateSpace Independent Publishing Platform.
+- Patterson, J., & Gibson, A. (2017). Deep learning: A practitioner’s approach (First edition). O’Reilly.
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. The MIT press.
 
-## Technical Description
+
+## Technical Description 05/2021
                           Off line handwritten text recognition using DL4J and OpenCV libs
                           
 Off line подразумевает, что слово сегментируется на буквы, эти буквы проходят через нейронку и получается криво предсказанное слово.
