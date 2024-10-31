@@ -46,6 +46,8 @@ Eng: First degree diploma of the republican competition of scientific projects i
 
 [Республикалық ғылыми жобалар конкурсының қорытындысы](https://www.jasdarynpvl.edu.kz/journal/view/1/523)
 
+[https://khabar.kz/ru/news/nauka-i-obrazovanie/item/131059-shkolnik-razrabotal-unikalnoe-prilozhenie-po-raspoznavaniyu-kazakhskogo-rukopisnogo-teksta](https://khabar.kz/ru/news/nauka-i-obrazovanie/item/131059-shkolnik-razrabotal-unikalnoe-prilozhenie-po-raspoznavaniyu-kazakhskogo-rukopisnogo-teksta)
+
 ## Description 02/2021
 Программа написана на Java, с использованием открытых библиотек OpenCV и DL4J, под android, не составляет труда перенести ее на другие платформы.  На разработку ушло 2 месяца. Изначально я писал на Java полносвязную искусственную нейронную сеть с нуля, и я написал, но скорость обучения и прогнозирования медленнее библиотеки DL4J. Мне были интересны нейронные сети и интересны до сих пор. Тема проекта была выбрана при обсуждении направления проекта с научным консультантом Дарией Болатовной.  Изначально было умение программировать, чему я научился, изучая литературу, и желание сделать что-нибудь из области искусственного интеллекта.  
 
